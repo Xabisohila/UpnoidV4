@@ -10,8 +10,11 @@
 <table id="movies" class="table table-bordered table-hover">
     <thead>
     <tr>
-        <th>Movie</th>
+        <th><b>Movie</b></th>
         <th>Genre</th>
+        <th><b>Number in Stock</b></th>
+        <th><b>Release Date</b></th>
+        
     </tr>
     </thead>
     <tbody>
@@ -32,7 +35,14 @@
                     },
                     {
                         data: "genre.name"
+                    },
+                    {
+                        data: "numberInStock"
+                    },
+                    {
+                        data: "releaseDate"
                     }
+
                 ]
             });
         });
