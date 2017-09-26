@@ -13,6 +13,11 @@ namespace UpnoidV4
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //defining a custom route
+            routes.MapMvcAttributeRoutes();
+
+            
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

@@ -54,9 +54,10 @@ namespace UpnoidV4
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "138382683447485",
+               appSecret: "489849664038a8acb7ae9e566e2fa3dd");
+            
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

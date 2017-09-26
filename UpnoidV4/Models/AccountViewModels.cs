@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace UpnoidV4.Models
 {
@@ -8,6 +9,7 @@ namespace UpnoidV4.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
     }
 
     public class ExternalLoginListViewModel
@@ -64,6 +66,10 @@ namespace UpnoidV4.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        [StringLength(10)]
+        public string Phone { get; set; }
+    
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
