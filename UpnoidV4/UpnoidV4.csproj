@@ -196,6 +196,7 @@
     <Compile Include="Controllers\Api\CustomersController.cs" />
     <Compile Include="Controllers\Api\MoviesController.cs" />
     <Compile Include="Controllers\Api\NewRentalsController.cs" />
+    <Compile Include="Controllers\Api\RentalsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\RentalsController.cs" />
     <Compile Include="Dtos\CustomerDto.cs" />
@@ -203,6 +204,7 @@
     <Compile Include="Dtos\MembershipTypeDto.cs" />
     <Compile Include="Dtos\MovieDto.cs" />
     <Compile Include="Dtos\NewRentalDto.cs" />
+    <Compile Include="Dtos\RentalDto.cs" />
     <Compile Include="Migrations\201709231731589_InitialModel.cs" />
     <Compile Include="Migrations\201709231731589_InitialModel.Designer.cs">
       <DependentUpon>201709231731589_InitialModel.cs</DependentUpon>
@@ -567,6 +569,9 @@
     <Content Include="Views\Movies\MovieForm.cshtml" />
     <Content Include="Views\Movies\ReadOnlyList.cshtml" />
     <Content Include="Views\Rentals\New.cshtml" />
+    <Content Include="Views\Rentals\Index.cshtml" />
+    <Content Include="Views\Rentals\Details.cshtml" />
+    <Content Include="Views\Rentals\Home.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

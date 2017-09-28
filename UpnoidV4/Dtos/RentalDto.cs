@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using UpnoidV4.Models;
 
-namespace UpnoidV4.Models
+namespace UpnoidV4.Dtos
 {
-    public class Rental
+    public class RentalDto
     {
         public int Id { get; set; }
 
@@ -15,7 +16,7 @@ namespace UpnoidV4.Models
 
         [Required]
         public Movie Movie { get; set; }
-        [DataType(DataType.Date)]
+
         public DateTime DateRented { get; set; }
 
         public DateTime? DateReturned { get; set; }

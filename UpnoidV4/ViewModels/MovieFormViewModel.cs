@@ -19,6 +19,7 @@ namespace UpnoidV4.ViewModels
               public byte? GenreId { get; set; }
               [Required]
               [Display(Name="Release Date")]
+              [DataType(DataType.Date)]
               public DateTime? ReleaseDate { get; set; }
               [Display(Name = "Number in Stock")]
               [Range(1,20)]

@@ -1,0 +1,66 @@
+﻿@model IEnumerable<UpnoidV4.Models.Rental>
+@{
+    ViewBag.Title = "Rentals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Rentals</h2>
+
+<table id="rentals" class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th><b>Customer</b></th>
+        <th><b>Movie</b></th>
+        <th><b>Date Rented</b></th>
+        <th><b>Delete</b></th>
+    </tr>
+    </thead>
+</table>
+@section scripts
+{
+    <script>
+        $(document).ready(function() {
+            var table = $("#rentals").dataTable({
+                lengthMenu: [[5, 6, 10, 25, 50, -1], [5, 6, 10, 25, 50, "All"]],
+                pageLenght:4,
+                ajax: {
+                    url: "/api/rentals",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "customer.name"
+                    },
+                    {
+                        data:"movie.name"
+                    },
+                    {
+                        data:"dateRented"
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button class='btn-link js-delete' data-rental-id=" + data + ">Delete</button>";
+                        }
+                    }
+
+                ]
+            });
+            $("#rentals").on("click", ".js-delete", function () {
+                var button = $(this);
+
+                bootbox.confirm("Are you sure you want to delete this?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/rentals/" + button.attr("data-rental-id"),
+                            method: "DELETE",
+                            success: function () {
+                                table.row(button.parents("tr")).remove().draw();
+                            }
+                        });
+                    }
+                });
+            });
+        })
+    </script>
+}
