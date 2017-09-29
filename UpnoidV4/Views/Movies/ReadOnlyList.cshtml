@@ -25,6 +25,8 @@
     <script>
         $(document).ready(function () {
             var table = $("#movies").DataTable({
+                lengthMenu: [[5, 6, 10, 25, 50, -1], [5, 6, 10, 25, 50, "All"]],
+                pageLenght: 4,
                 ajax: {
                     url: "/api/movies",
                     dataSrc: ""

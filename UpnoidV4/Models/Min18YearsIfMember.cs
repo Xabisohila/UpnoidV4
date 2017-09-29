@@ -22,7 +22,7 @@ namespace UpnoidV4.Models
 
             return (age >= 18)
                 ? ValidationResult.Success
-                : new ValidationResult("Customer should be atleast 18 to go a membership");
+                : new ValidationResult("Customer should be atleast 18 to go on a membership");
         }
     }
 }

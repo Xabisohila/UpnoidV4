@@ -26,9 +26,12 @@ namespace UpnoidV4.Controllers
         // GET: Customers
         public ViewResult Index()
         {
-            //var customer = _context.Customers.Include(c=>c.MembershipType).ToList();
-            return View();
+            if(User.IsInRole(RoleName.CanManageMovies))
+            return View("Index");
+
+            return View("AccessDenied");
         }
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
@@ -39,6 +42,7 @@ namespace UpnoidV4.Controllers
             };
             return View("CustomerForm",viewModel);
         }
+        [Authorize(Roles = RoleName.CanManageMovies)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
@@ -64,8 +68,8 @@ namespace UpnoidV4.Controllers
             }
             _context.SaveChanges();
             return RedirectToAction("Index", "Customers");
-        }    
-
+        }
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Details(int id)
         {
             var customer = _context.Customers.Include(c=>c.MembershipType).SingleOrDefault(c => c.Id == id);
@@ -73,6 +77,7 @@ namespace UpnoidV4.Controllers
                 HttpNotFound();
             return View(customer);
         }
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);

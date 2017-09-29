@@ -24,7 +24,8 @@ textarea {
 }
 
 .field-validation-error,
-label.error {
+label.error,
+validation-summary-errors {
     color: red;
 }
 

@@ -23,12 +23,15 @@ namespace UpnoidV4.Controllers
         {
             if (User.IsInRole(RoleName.CanManageMovies))
                 return View("Index");
-            else
+       
                 return View("Home");
         }
         public ActionResult New()
         {
-            return View();
+            if (User.IsInRole(RoleName.CanManageMovies))
+            return View("New");
+
+            return View("AccessDenied");
         }
         public ActionResult Details(int id)
         {
