@@ -26,7 +26,11 @@ namespace UpnoidV4.ViewModels
               [Required]
               public byte? NumberInStock { get; set; }
 
-              public string Title
+       
+              public byte NumberAvailable { get; set; }
+
+
+        public string Title
               {
                   get
                   {

@@ -17,14 +17,12 @@ namespace UpnoidV4.Controllers
         {
             _context = new ApplicationDbContext();
         }
-
-        [Authorize(Roles = RoleName.CanManageMovies)]
         public ViewResult Index()
         {
             if (User.IsInRole(RoleName.CanManageMovies))
                 return View("Index");
        
-                return View("Home");
+                return View("Index");
         }
         public ActionResult New()
         {

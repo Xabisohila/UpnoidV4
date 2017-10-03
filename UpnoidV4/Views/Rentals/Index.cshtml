@@ -12,7 +12,7 @@
         <th><b>Customer</b></th>
         <th><b>Movie</b></th>
         <th><b>Date Rented</b></th>
-        <th><b>Delete</b></th>
+        <th><b>Number Available</b></th>
     </tr>
     </thead>
 </table>
@@ -38,11 +38,9 @@
                         data:"dateRented"
                     },
                     {
-                        data: "id",
-                        render: function (data) {
-                            return "<button class='btn-link js-delete' data-rental-id=" + data + ">Delete</button>";
-                        }
-                    }
+                        data:"movie.numberAvailable"
+                    },
+                    
 
                 ]
             });

@@ -245,10 +245,6 @@
     <Compile Include="Migrations\201709232150091_AddExercise3Migration.Designer.cs">
       <DependentUpon>201709232150091_AddExercise3Migration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201709232153221_PopulateGenre.cs" />
-    <Compile Include="Migrations\201709232153221_PopulateGenre.Designer.cs">
-      <DependentUpon>201709232153221_PopulateGenre.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201709240230525_TenthMigration.cs" />
     <Compile Include="Migrations\201709240230525_TenthMigration.Designer.cs">
       <DependentUpon>201709240230525_TenthMigration.cs</DependentUpon>
@@ -284,6 +280,10 @@
     <Compile Include="Migrations\201709252044136_AddedSomeNotationOnMovie.cs" />
     <Compile Include="Migrations\201709252044136_AddedSomeNotationOnMovie.Designer.cs">
       <DependentUpon>201709252044136_AddedSomeNotationOnMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710031128016_PopulateGenre.cs" />
+    <Compile Include="Migrations\201710031128016_PopulateGenre.Designer.cs">
+      <DependentUpon>201710031128016_PopulateGenre.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -577,6 +577,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Slider\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -617,9 +618,6 @@
     <EmbeddedResource Include="Migrations\201709232150091_AddExercise3Migration.resx">
       <DependentUpon>201709232150091_AddExercise3Migration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709232153221_PopulateGenre.resx">
-      <DependentUpon>201709232153221_PopulateGenre.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709240230525_TenthMigration.resx">
       <DependentUpon>201709240230525_TenthMigration.cs</DependentUpon>
     </EmbeddedResource>
@@ -646,6 +644,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709252044136_AddedSomeNotationOnMovie.resx">
       <DependentUpon>201709252044136_AddedSomeNotationOnMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710031128016_PopulateGenre.resx">
+      <DependentUpon>201710031128016_PopulateGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
