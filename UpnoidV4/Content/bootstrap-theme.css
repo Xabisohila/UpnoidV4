@@ -1,5 +1,5 @@
 ﻿body {
-    color: #52656B;
+    color:#ffffff;
 }
 
 h1, .h1, h2, .h2, h3, .h3 {
@@ -7,7 +7,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    color: #3B4B50;
+    color: #ffffff;
 }
 
 h2, .h2 {
@@ -69,8 +69,8 @@ a, .btn-link {
 
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
     color: #ffffff;
-    background-color: #52656B;
-    border-color: #52656B;
+    background-color: #ff3b77;
+    border-color: #ff3b77;
 }
 
 .pagination > li > a, .pager > li > a, .pagination > li > span, .pager > li > span {

@@ -22,15 +22,23 @@ select,
 textarea {
     max-width: 280px;
 }
+.col-md-2 control-label {
+    color: white;
+}
 
 .field-validation-error,
 label.error,
 validation-summary-errors {
     color: red;
 }
-
+.tt-hint error,
 .input-validation-error,
 input.error {
     border: 2px solid red;
+}
+.tt-suggestion,
+.tt-selectable,
+.tt-highlight {
+    color: #B9266B;
 }
 
