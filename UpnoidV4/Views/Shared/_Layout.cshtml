@@ -6,7 +6,10 @@
     <title>@ViewBag.Title - Upnoid Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
 
+    <meta name="description" content="The description of my page" />
 </head>
 <body>
 @Html.Partial("_NavBar")
@@ -14,8 +17,37 @@
     @RenderBody()
     <hr/>
     <footer>
-        <p>&copy; @DateTime.Now.Year - Upnoid _uXabiso Hila</p>
-       
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="x">
+                        <div class="widget">
+                            <p>&copy; @DateTime.Now.Year - UpnoidApp </p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-md-4">
+                    <div class="widget">
+                        <h5>STAY IN TOUCH</h5>
+                        <ul class="company-social">
+                            <li><a href="https://www.facebook.com/Xabisohila"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://www.twitter.com"><i class="fa fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-md-4">
+                    <div class="widget">
+                        <h5>Github</h5>
+                        <ul class="company-social">
+                            <li><a href="https://www.github.com/Xabisohila"><i class="fa fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </div>
 

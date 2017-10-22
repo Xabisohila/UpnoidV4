@@ -5,21 +5,28 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>List of Movies</h2>
+<hr/>
 <p>
-    @Html.ActionLink("New Movie", "New", "Movies", null, new { @class = "btn btn-success" })
-    @Html.ActionLink("View Rented Movies", "Index", "Rentals", null, new { @class = "btn btn-success" })
+    @Html.ActionLink("New Movie", "New", "Movies", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("View Rented Movies", "Index", "Rentals", null, new { @class = "btn btn-primary" })
 </p>
 
 <table id="movies" class="table table-bordered table-hover">
     <thead>
-    <tr>
-        <th><b>Movie</b></th>
-        <th><b>Genre</b></th>
-        <th><b>Number Available</b></th>
-        <th><b>Delete</b></th>
-    </tr>
+        <tr>
+            <th><div><b>Movie</b></div></th>
+            <th><div><b>Genre</b></div></th>
+            <th><div><b>Number Available</b></div></th>
+            <th><div><b>Delete</b></div></th>
+
+            <th><div><b>Watch Trailer</b></div></th>
+            
+        </tr>
     </thead>
-    <tbody></tbody>
+    <tbody>
+       
+          
+    </tbody>
 </table>
 @section scripts
 {
@@ -28,6 +35,7 @@
             var table = $("#movies").DataTable({
                 lengthMenu: [[5, 6, 10, 25, 50, -1], [5, 6, 10, 25, 50, "All"]],
                 pageLenght: 4,
+                "bSort": true,
                 ajax: {
                     url: "/api/movies",
                     dataSrc: ""
@@ -46,12 +54,21 @@
                     {
                         data: "numberAvailable"
                     },
+                  
                     {
                         data: "id",
                         render: function(data) {
-                            return "<button class='btn-link js-delete' data-movie-id=" + data + ">Delete</button>";
+                            return "<button class='btn btn-primary js-delete' data-movie-id=" + data + ">Delete</button>";
                         }
-                    }
+                    },
+                    {
+                        data: "id",
+                        render: function(data) {
+                            return "<a href='/movies/trailer/'> Watch Trailer</a>";
+                        }
+                    },
+                  
+                   
                 ]
             });
             $("#movies").on("click", ".js-delete", function () {

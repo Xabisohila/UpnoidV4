@@ -4,7 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>Customers</h2>
-@Html.ActionLink("New Customer", "New", "Customers", null, new { @class = "btn btn-success" })
+<hr/>
+
+@Html.ActionLink("New Customer", "New", "Customers", null, new { @class = "btn btn-primary" })
 
 <table id="customers" class="table table-bordered table-hover">
     <thead>
@@ -12,7 +14,6 @@
         <td><b>Customer</b></td>
         <td><b>Membership Type</b></td>
         <td><b>Newsletter</b></td>
-        <td><b>Date of Birth</b></td>
         <td><b>Delete</b></td>
     </tr>
     </thead>
@@ -42,13 +43,11 @@
                     {
                         data: "isSubcribedToNewsletter"
                     },
-                    {
-                        data: "birthDate"
-                    },
+                    
                     {
                         data: "id",
                         render: function(data) {
-                            return "<button class='btn-link js-delete' data-customer-id=" + data + ">Delete</button>";
+                            return "<button class='btn btn-primary js-delete' data-customer-id=" + data + ">Delete</button>";
                         }
                     }
                 ]

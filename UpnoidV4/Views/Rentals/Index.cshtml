@@ -5,12 +5,15 @@
 }
 
 <h2>Rentals</h2>
+<hr/>
+<p>
+    @Html.ActionLink("Go Back", "Index", "Movies", null, new { @class = "btn btn-primary" })
+</p>
 
 <table id="rentals" class="table table-bordered table-hover">
     <thead>
     <tr>
-        <th><b>Customer</b></th>
-        <th><b>Movie</b></th>
+        <th><b>Rented Movie</b></th>
         <th><b>Date Rented</b></th>
         <th><b>Number Available</b></th>
     </tr>
@@ -29,9 +32,6 @@
                 },
                 columns: [
                     {
-                        data: "customer.name"
-                    },
-                    {
                         data:"movie.name"
                     },
                     {
@@ -39,7 +39,7 @@
                     },
                     {
                         data:"movie.numberAvailable"
-                    },
+                    }
                     
 
                 ]

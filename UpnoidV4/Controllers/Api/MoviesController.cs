@@ -5,7 +5,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Data.Entity;
 using AutoMapper;
 using UpnoidV4.Dtos;
 using UpnoidV4.Models;

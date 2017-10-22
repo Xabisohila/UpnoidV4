@@ -28,8 +28,8 @@ namespace UpnoidV4
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-cyborg.css",
-                      //"~/Content/bootstrap-lumen.css",
+                      //"~/Content/bootstrap-cyborg.css",
+                      "~/Content/bootstrap-lumen.css",
                       "~/Content/bootstrap-theme.css",
                       "~/Content/datatables/css.js/datatables.bootstrap.css",
                       "~/Content/typeahead.css",

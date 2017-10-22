@@ -2,99 +2,152 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<h2 class="text-center center" style="color:white;"><b>UPCOMING</b></h2> 
-<div class="home">
-    <div class="row">
-        <div class="col-xs-6 col-md-4">
-            <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:white">
-                So What. Coming soon!!!
-                <img src="~/images/what now.jpg" alt="" />
-            </a>
+<div class="xabiso">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+
+        </ol>
+
+        <!--Wrapper for slides-->
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="~/images/wind river.jpg" Alt="Fast 9" style="width: 100%;">
+                <div class="carousel-caption">
+                    <p><h2>Fast 9</h2></p>
+                    <p><b>Coming out October 31</b></p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <img src="~/images/wind river (2).jpg" Alt="The Spaceship" style="width: 100%;">
+                <div class="carousel-caption">
+                    <h3>Spaceship</h3>
+                    <p>Coming out November 16</p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <img src="~/images/wind river.jpg" Alt="The Wall" style="width: 100%;">
+                <div class="carousel-caption">
+                    <h3>The Great Wall</h3>
+                    <p>Coming out November 10</p>
+                </div>
+            </div>
+
+
         </div>
 
-        <div class="col-xs-6 col-md-4">
-            <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:white">
-                Fate and Furius 8. Coming soon!!!
-                <img src="~/images/fast 8.jpg" alt="" />
-            </a>
-        </div>
-        <div class="col-xs-6 col-md-4">
-            <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:white">
-                So What. Coming soon!!!
-                <img src="~/images/what now.jpg" alt="" />
-            </a>
-        </div>
 
-        <div class="col-xs-6 col-md-4">
-            <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:white">
-                Boyka Undisputed. Coming soon!!!
-                <img src="~/images/boyka.jpg" alt="" />
-            </a>
-        </div>
+        <!--left and right controls-->
 
-        <div class="col-xs-6 col-md-4">
-            <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:white">
-                Justice League. Coming soon!!!
-                <img src="~/images/justice league.png" alt="" />
-            </a>
-        </div>
+        <a class="left carousel-control" href="myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
 
-        <div class="col-xs-6 col-md-4">
-            <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:white">
-                Boyka Undisputed. Coming soon!!!
-                <img src="~/images/boyka.jpg" alt="" />
-            </a>
+        <a class="right carousel-control" href="myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+
+
+
+
+    <h2 class="text-center center" style="color:black;"><b>UPCOMING</b></h2>
+    <div class="home">
+        <div class="row">
+            <div class="col-xs-6 col-md-4">
+                <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:black">
+                    SO WHAT. Coming soon!!!
+                    <img src="~/images/what now.jpg" alt="" />
+                </a>
+            </div>
+
+            <div class="col-xs-6 col-md-4">
+                <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:black">
+                    FAST AND FURIOUS 9. Coming soon!!!
+                    <img src="~/images/fast 8.jpg" alt="" />
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-4">
+                <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:black">
+                    THE LOVERS. Coming soon!!!
+                    <img src="~/images/thelovers.jpg" alt="" />
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-4">
+                <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:black">
+                    SNOWMAN. Coming soon!!!
+                    <img src="~/images/snowman.jpg" alt="" />
+                </a>
+            </div>
+
+            
+
+            <div class="col-xs-6 col-md-4">
+                <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:black">
+                    THE SPACESHIP. Coming soon!!!
+                    <img src="~/images/the spaceship.jpg" alt="" />
+                </a>
+            </div>
+            
+            <div class="col-xs-6 col-md-4">
+                <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:black">
+                    BOYKA UNDISPUTED. Coming soon!!!
+                    <img src="~/images/boyka.jpg" alt="" />
+                </a>
+            </div>
+
+           
         </div>
     </div>
-</div>
-<h2 class="text-center center" style="color:white;"><b>POPULAR</b></h2> 
-<div class="col-xs-6 col-md-4">
-    <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:white">
-        Justice League. Coming soon!!!
-        <img src="~/images/justice league.png" alt="" />
-    </a>
-</div>
-<div class="col-xs-6 col-md-4">
-    <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:white">
-        Fate and Furius 8. Coming soon!!!
-        <img src="~/images/fast 8.jpg" alt="" />
-    </a>
-</div>
-<div class="col-xs-6 col-md-4">
-    <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:white">
-        Boyka Undisputed. Coming soon!!!
-        <img src="~/images/boyka.jpg" alt="" />
-    </a>
-</div>
+    <h2 class="text-center center" style="color:black;"><b>POPULAR</b></h2>
+    <div class="col-xs-6 col-md-4">
+        <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:black">
+            MY COUSIN RACHEL. Coming soon!!!
+            <img src="~/images/my-cousin-rachel.jpg" alt="" />
+        </a>
+    </div>
+    <div class="col-xs-6 col-md-4">
+        <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:black">
+            WIND RIVER. Coming soon!!!
+            <img src="~/images/wind river.jpg" alt="" />
+        </a>
+    </div>
+    <div class="col-xs-6 col-md-4">
+        <a href="@Url.Action("Index", "Movies")" class="thumbnail" style="color:black">
+            HANGOVER IIII. Coming soon!!!
+            <img src="~/images/hangover.jpg" alt="" />
+        </a>
+    </div>
 
-<h2 class="text-center center" style="color:white;"><b>NOW PLAYING</b></h2> 
-<div class="row">
-    <div class="col-sm-4">
-        <div class="card">
-            <div class="card-block">
-                <h3 class="card-title">Special title treatment</h3>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+   
+    <div class="row">      
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-block">
+                    <a href="https://github.com/Xabisohila/UpnoidV4" class="btn btn-primary">Upnoid Github</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-block">
+                    @*<h3 class="card-title">Special title treatment</h3>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>*@
+                    <a href="#" class="btn btn-primary">Upnoid</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-4">
-        <div class="card">
-            <div class="card-block">
-                <h3 class="card-title">Special title treatment</h3>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="card">
-            <div class="card-block">
-                <h3 class="card-title">Special title treatment</h3>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div>
-</div>
 
+</div>

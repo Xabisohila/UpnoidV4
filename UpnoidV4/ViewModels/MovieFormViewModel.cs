@@ -19,8 +19,8 @@ namespace UpnoidV4.ViewModels
               public byte? GenreId { get; set; }
               [Required]
               [Display(Name="Release Date")]
-              [DataType(DataType.Date)]
-              public DateTime? ReleaseDate { get; set; }
+              public string ReleaseDate { get; set; }
+              //public DateTime? ReleaseDate { get; set; }
               [Display(Name = "Number in Stock")]
               [Range(1,20)]
               [Required]
@@ -28,6 +28,9 @@ namespace UpnoidV4.ViewModels
 
        
               public byte NumberAvailable { get; set; }
+        [Required]
+        [StringLength(100, MinimumLength = 7)]
+        public string Description { get; set; }
 
 
         public string Title

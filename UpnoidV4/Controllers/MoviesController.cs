@@ -21,6 +21,18 @@ namespace UpnoidV4.Controllers
         {
             _context.Dispose();
         }
+        [AllowAnonymous]
+        public ActionResult Trailer()
+        {
+            return Redirect("https://www.youtube.com");
+        }
+
+        //trailer
+
+        public ViewResult Indexx()
+        {
+            return View();
+        }
 
         public ViewResult Index()
         {
@@ -109,7 +121,7 @@ namespace UpnoidV4.Controllers
             {
                 //added this line
                 movie.NumberAvailable = movie.NumberInStock;
-                movie.DateAdded = DateTime.Now;
+                //movie.DateAdded = DateTime.Now;
                 _context.Movies.Add(movie);
             }
             else

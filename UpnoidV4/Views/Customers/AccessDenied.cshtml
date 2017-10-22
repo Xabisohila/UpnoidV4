@@ -3,13 +3,15 @@
     ViewBag.Title = "Error";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<h2>Error</h2>
+<hr />
 <form>
     <h1 class="text-center">Oooooops! Access Denied!😡😡</h1>
     <h3 class="text-center">Seems like you not Admin.</h3>
     <br /><br />
     <div class="text-center">
        <p>
-        @Html.ActionLink("Back to home >>","Index", "Home",null , new { @class = "btn btn-success" }) 
+        @Html.ActionLink("Back to home >>","Index", "Home",null , new { @class = "btn btn-primary" }) 
         </p>
     </div>
     <br /><br /><br /><br />

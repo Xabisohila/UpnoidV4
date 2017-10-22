@@ -7,7 +7,7 @@
 
 <h2>Movies</h2>
 <p>
-    @Html.ActionLink("View Rented Movies", "Index", "Rentals", null, new { @class = "btn btn-success" })
+    @Html.ActionLink("View Rented Movies", "Index", "Rentals", null, new { @class = "btn btn-primary" })
 </p>
 
 <table id="movies" class="table table-bordered table-hover">
@@ -16,8 +16,7 @@
         <th><b>Movie</b></th>
         <th><b>Genre</b></th>
         <th><b>Number in Stock</b></th>
-        <th><b>Release Date</b></th>
-        
+        <th><b>Watch Trailer</b></th>     
     </tr>
     </thead>
     <tbody>
@@ -36,7 +35,10 @@
                 },
                 columns: [
                     {
-                        data: "name"
+                        data: "name",
+                        render: function (data, type, movie) {
+                            return "<a href='/movies/details/" + movie.id + "'>" + movie.name + "</a>";
+                        }
                     },
                     {
                         data: "genre.name"
@@ -44,8 +46,12 @@
                     {
                         data: "numberInStock"
                     },
+                   
                     {
-                        data: "releaseDate"
+                        data: "id",
+                        render: function (data) {
+                            return "<a href='/movies/trailer/'> Watch Trailer</a>";
+                        }
                     }
 
                 ]

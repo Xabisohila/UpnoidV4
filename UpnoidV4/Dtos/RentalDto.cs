@@ -17,7 +17,7 @@ namespace UpnoidV4.Dtos
         [Required]
         public Movie Movie { get; set; }
 
-        public DateTime DateRented { get; set; }
+        public string DateRented { get; set; }
 
         public DateTime? DateReturned { get; set; }
     }

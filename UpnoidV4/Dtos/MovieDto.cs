@@ -18,13 +18,15 @@ namespace UpnoidV4.Dtos
         public byte GenreId { get; set; }
 
         public GenreDto Genre { get; set; }
-
-        public DateTime DateAdded { get; set; }
-
-        public DateTime ReleaseDate { get; set; }
+      //  [DataType(DataType.Date)]
+        public string DateAdded { get; set; }
+       // [DataType(DataType.Date)]
+        public string ReleaseDate { get; set; }
 
         [Range(1, 20)]
         public byte NumberInStock { get; set; }
         public byte NumberAvailable { get; set; }
+
+        public string Description { get; set; }
     }
 }
